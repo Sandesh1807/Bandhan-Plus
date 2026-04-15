@@ -13,10 +13,12 @@ import ProfileView from './pages/ProfileView';
 import MyProfile from './pages/MyProfile';
 import Interests from './pages/Interests';
 import SuccessStories from './pages/SuccessStories';
+import Chat from './pages/Chat';
 
 // Components
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -36,7 +38,9 @@ function App() {
           <Route path="/profile/:id" element={<ProtectedRoute><ProfileView /></ProtectedRoute>} />
           <Route path="/my-profile" element={<ProtectedRoute><MyProfile /></ProtectedRoute>} />
           <Route path="/interests" element={<ProtectedRoute><Interests /></ProtectedRoute>} />
+          <Route path="/chat/:matchId" element={<ProtectedRoute><Chat /></ProtectedRoute>} />
         </Routes>
+        <Chatbot />
       </Router>
     </AuthProvider>
   );

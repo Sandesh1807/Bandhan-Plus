@@ -89,7 +89,12 @@ const Interests = () => {
                   )}
                 </div>
                 {tab === 'matches' && (
-                  <span className="text-rose-600 font-semibold text-sm bg-rose-50 px-3 py-1 rounded-full">Matched 🎉</span>
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); navigate(`/chat/${p._id}`); }}
+                    className="text-white font-semibold text-sm bg-gradient-to-r from-rose-500 to-rose-600 px-4 py-2 rounded-xl hover:shadow-md hover:from-rose-600 hover:to-rose-700 transition"
+                  >
+                    Chat Now
+                  </button>
                 )}
               </div>
             ))}

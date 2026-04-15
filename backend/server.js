@@ -23,6 +23,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/profile', require('./routes/profileRoutes'));
 app.use('/api/matches', require('./routes/matchRoutes'));
 app.use('/api/interests', require('./routes/interestRoutes'));
+app.use('/api/messages', require('./routes/messageRoutes'));
 
 // Health check
 app.get('/', (req, res) => res.json({ message: 'BandhanPlus API Running ✅' }));

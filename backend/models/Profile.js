@@ -97,8 +97,8 @@ const profileSchema = new mongoose.Schema({
   // Profile active or hidden
   isActive: { type: Boolean, default: true },
 
-  // Premium status
   isPremium: { type: Boolean, default: false },
+  freeMessagesSent: { type: Number, default: 0 },
 
 }, { timestamps: true });
 
